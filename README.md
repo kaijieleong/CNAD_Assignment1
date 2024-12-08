@@ -10,8 +10,7 @@ This is a Car Sharing Platform that allows users to rent vehicles, view availabl
 
 - **User Service**: Manages user registration, login, authentication, and user profile management. It interacts with the `Users` table in the database and ensures that users' details are kept secure.
 - **Vehicle Service**: Handles the vehicle inventory, manages car availability, vehicle booking, and related actions. It communicates with the `Vehicles` and `Bookings` tables to manage vehicle status and reservations.
-- **Billing Service**: Manages the pricing model, calculates billing based on membership tiers, generates invoices, and processes payments. This service is integrated into the `Users`, `Bookings`, and `Payments` tables.
-- **Payment Service**: Processes payments and manages payment methods, though for this project, the system currently only generates invoices without handling actual payment transactions.
+
 
 ### **Database Structure**
 
