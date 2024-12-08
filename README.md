@@ -61,14 +61,14 @@ This is a Car Sharing Platform that allows users to rent vehicles, view availabl
 5. **Shutdown**:
    To stop the services, simply press Ctrl + C in the terminal running each service.
 
-### **Running the Services Locally**
+## **Running the Services Locally**
 **The user-service and vehicle-service run on different ports**:
    User Service: http://localhost:8081
    Vehicle Service: http://localhost:8082
    Make sure to run both services simultaneously for the system to function properly. Use Postman or curl for interaction with the services.
 
 
-### **Test Data**
+## **Test Data**
 
 # 1. Register a new user
 # This command registers a new user with their name, email, phone, and password.
