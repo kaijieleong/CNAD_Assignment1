@@ -70,8 +70,8 @@ This is a Car Sharing Platform that allows users to rent vehicles, view availabl
 
 ## **Test Data**
 
-# 1. Register a new user
-# This command registers a new user with their name, email, phone, and password.
+1. **Register a new user**
+**This command registers a new user with their name, email, phone, and password.**
 curl -X POST http://localhost:8081/auth/register -H "Content-Type: application/json" -d '{
   "name": "Kai",
   "email": "ka@example.com",
@@ -79,31 +79,31 @@ curl -X POST http://localhost:8081/auth/register -H "Content-Type: application/j
   "password": "kj"
 }'
 
-# 2. Login
-# This command logs the user in by providing email and password. The session is saved in a cookies file.
+2. **Login**
+**This command logs the user in by providing email and password. The session is saved in a cookies file.**
 curl -X POST http://localhost:8081/auth/login -H "Content-Type: application/json" -d '{
   "email": "ka@example.com",
   "password": "kj"
 }' -c ../cookies.txt
 
-# 3. Logout
-# This command logs the user out and clears the session.
+3. **Logout**
+**This command logs the user out and clears the session.**
 curl -X GET http://localhost:8081/auth/logout -b ../cookies.txt -c ../cookies.txt
 
-# 4. Access Account
-# This command accesses the account information of the logged-in user.
+4. **Access Account**
+**This command accesses the account information of the logged-in user.**
 curl -X GET http://localhost:8081/account -b ../cookies.txt
 
-# 5. Access Rental History
-# This command fetches the rental history of the logged-in user.
+5. **Access Rental History**
+**This command fetches the rental history of the logged-in user.**
 curl -X GET http://localhost:8081/rental-history -b ../cookies.txt
 
-# 6. Get Vehicles
-# This command fetches a list of available vehicles from the vehicle service.
+6. **Get Vehicles**
+**This command fetches a list of available vehicles from the vehicle service.**
 curl -X GET http://localhost:8082/vehicles
 
-# 7. Create Booking
-# This command creates a booking for a vehicle by providing user ID, vehicle ID, start time, end time, and total price.
+7. **Create Booking**
+**This command creates a booking for a vehicle by providing user ID, vehicle ID, start time, end time, and total price.**
 curl -X POST http://localhost:8082/bookings -H "Content-Type: application/json" -d '{
   "user_id": 3,
   "vehicle_id": 1,
@@ -112,19 +112,19 @@ curl -X POST http://localhost:8082/bookings -H "Content-Type: application/json" 
   "total_price": 30.00
 }'
 
-# 8. Edit Booking
-# This command modifies an existing booking by changing the vehicle or the start time.
+8. **Edit Booking**
+**This command modifies an existing booking by changing the vehicle or the start time.**
 curl -X PUT http://localhost:8082/bookings/1 -H "Content-Type: application/json" -d '{
   "vehicle_id": 2,
   "start_time": "2024-12-10T12:00:00Z"
 }'
 
-# 9. Cancel Booking
-# This command cancels an existing booking based on the booking ID.
+9. **Cancel Booking**
+**This command cancels an existing booking based on the booking ID.**
 curl -X DELETE http://localhost:8082/bookings/2
 
-# 11. Generate Invoice
-# This command generates an invoice after a successful booking, which includes details like user ID, vehicle ID, and total price.
+11. Generate Invoice
+**This command generates an invoice after a successful booking, which includes details like user ID, vehicle ID, and total price.**
 curl -X POST http://localhost:8082/billing/invoice -H "Content-Type: application/json" -d '{
   "user_id": 3,
   "vehicle_id": 1,
@@ -133,8 +133,8 @@ curl -X POST http://localhost:8082/billing/invoice -H "Content-Type: application
   "total_price": 30.00
 }'
 
-# 13. View All Bookings for a User
-# This command retrieves all bookings made by the logged-in user.
+13. **View All Bookings for a User**
+**This command retrieves all bookings made by the logged-in user.**
 curl -X GET http://localhost:8082/bookings -b ../cookies.txt
 
 
